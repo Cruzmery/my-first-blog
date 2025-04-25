@@ -1,38 +1,74 @@
 h1 a, h2 a {
-    color: #C25100;
+    color: #FFB4A2;
     font-family: 'Lobster';
 }
 
 body {
-    padding-left: 15px;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(180deg, #fff8f0, #fdebd3);
+    background-color: #fff8f0;
+    color: #333;   
 }
 
 .page-header {
-    background-color: #C25100;
-    margin-top: 0;
+    background-color: #FFB4A2;
+    padding: 30px 40px;
     margin-bottom: 40px;
-    padding: 20px 20px 20px 40px;
+    color: white;
+    border-radius: 0 0 10px 10px;
 }
 
-.page-header h1,
+.page-header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 36pt;
+    margin: 0;
+}
+
 .page-header h1 a,
 .page-header h1 a:visited,
 .page-header h1 a:active {
-    color: #ffffff;
+    color: white;
     font-size: 36pt;
     text-decoration: none;
 }
 
-h1,
-h2,
+.top-menu,
+.top-menu:visited {
+    color: #ffffff;
+    float: right;
+    margin-top: 5px;
+    font-size: 26pt;
+    transition: transform 0.2s ease;
+    margin-right: 20px;
+}
+.top-menu:hover {
+    transform: scale(1.1);
+}
+
+.post {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 70px;
+}
+
+
+.post h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 24pt;
+}
+
+.post .date {
+    color: #888;
+    font-size: 12pt;
+}
+
 h3,
 h4 {
     font-family: 'Lobster', cursive;
 }
 
-.date {
-    color: #828282;
-}
 
 .save {
     float: right;
@@ -41,19 +77,6 @@ h4 {
 .post-form textarea,
 .post-form input {
     width: 100%;
-}
-
-.top-menu,
-.top-menu:hover,
-.top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
-}
-
-.post {
-    margin-bottom: 70px;
 }
 
 .post h2 a,
@@ -68,13 +91,87 @@ h4 {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: #C25100;
+    color: #FFB4A2;
+    border: 1px solid #FFB4A2;
     background: none;
-    border-color: #C25100;
+    transition: all 0.3s ease;
+    border-color: #FFB4A2;
     margin-left: 15px;
 }
 
 .btn-secondary:hover {
     color: #FFFFFF;
-    background-color: #C25100;
+    background-color: #FFB4A2;
+}
+
+/* Icono SVG dentro del botón de añadir publicación */
+.top-menu {
+    background-color: #FFB4A2;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-menu:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* SVG dentro del botón */
+.top-menu svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+.add-post-icon {
+    transition: transform 0.2s ease;
+    margin-top: 5px;
+    margin-right: 0;
+}
+
+.add-post-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Ícono para añadir publicación */
+.add-post-icon {
+    transition: transform 0.2s ease, fill 0.3s ease;
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    fill: #ffffff;
+}
+
+.add-post-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    fill: #ffe5cc; /* Tono suave al pasar el mouse */
+}
+
+/* Responsive: reducir tamaño del ícono en pantallas pequeñas */
+@media (max-width: 576px) {
+    .add-post-icon {
+        width: 32px;
+        height: 32px;
+        margin-top: 0;
+    }
+
+    .page-header h1 {
+        font-size: 28pt;
+    }
+}
+
+.fondo-personalizado {
+    background-image: url("../images/fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
