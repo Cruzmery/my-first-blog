@@ -4,6 +4,8 @@ from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
+from django.contrib import messages
+ # Asegúrate que el modelo se llama Post
 
 # Create your views here.
 
@@ -41,3 +43,12 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+
+def eliminar_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        post.delete()
+        messages.success(request, "Post eliminado correctamente.")
+        return redirect('post_list')  # Esta es tu vista principal correcta
+    return render(request, 'blog/confirmar_eliminar.html', {'post': post})

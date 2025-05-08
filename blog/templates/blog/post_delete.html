@@ -1,0 +1,21 @@
+<!-- blog/templates/blog/confirmar_eliminar.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar post</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <div class="delete-container">
+        <h2>¿Estás segura de que quieres eliminar este post?</h2>
+        <p><strong>{{ post.titulo }}</strong></p>
+
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn-danger-form">Sí, eliminar</button>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="btn-cancelar">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -11,7 +11,7 @@ body {
 }
 
 .page-header {
-    background-color: #FFB4A2;
+    background-color: white;
     padding: 30px 40px;
     margin-bottom: 40px;
     color: white;
@@ -53,7 +53,6 @@ body {
     margin-bottom: 70px;
 }
 
-
 .post h2 {
     font-family: 'Lobster', cursive;
     font-size: 24pt;
@@ -68,7 +67,6 @@ h3,
 h4 {
     font-family: 'Lobster', cursive;
 }
-
 
 .save {
     float: right;
@@ -106,7 +104,7 @@ h4 {
 
 /* Icono SVG dentro del botón de añadir publicación */
 .top-menu {
-    background-color: #FFB4A2;
+    background-color: #FF6363;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -173,5 +171,66 @@ h4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed; /* Opcional: fija la imagen al fondo */
     min-height: 100vh;
+}
+
+/* 🔴 Botón de eliminar pequeño, usado en post_detail.html */
+.btn-danger-inline {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 8px;
+    font-size: 16px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.btn-danger-inline:hover {
+    background-color: #c0392b;
+}
+
+/* 🧾 Estilo para el contenedor del formulario de confirmación de borrado */
+.delete-container {
+    max-width: 500px;
+    margin: 100px auto;
+    background: #fff0f0;
+    padding: 2em;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* 🔴 Botón "Sí, eliminar" en el formulario de confirmación */
+.btn-danger-form {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-danger-form:hover {
+    background-color: #c0392b;
+}
+
+/* ⚪ Botón "Cancelar" en el formulario de confirmación */
+.btn-cancelar {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.btn-cancelar:hover {
+    background-color: #bbb;
 }
